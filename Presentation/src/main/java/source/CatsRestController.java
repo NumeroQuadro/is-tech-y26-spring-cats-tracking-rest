@@ -9,6 +9,7 @@ import src.Services.CatService;
 import src.Services.OwnerService;
 
 import java.util.Collection;
+import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
 @NoArgsConstructor
@@ -22,7 +23,7 @@ public class CatsRestController {
 
     // http://localhost:8080/cats_tracking/cats/all-black-cats
     @GetMapping("/all-black-cats")
-    public Collection<CatDto> getAllBlackCats() {
+    public List<CatDto> getAllBlackCats() {
         var blackCats = catService.getAllBlackCats();
 
         return blackCats.stream().map(dtoConverter::convertCatToCatDto).toList();
