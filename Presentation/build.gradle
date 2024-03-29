@@ -1,0 +1,7 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation project (':Application')
+    implementation project (':Infrastructure')
+
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+}
